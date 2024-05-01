@@ -1,0 +1,72 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+#include <queue>
+#include <stack>
+#include <map>
+#include <set>
+#include <bitset>
+#include <cstring>
+#include <climits>
+
+using namespace std;
+
+#define int long long
+#define pb push_back
+#define mp make_pair
+#define pii pair<int, int>
+#define vi vector<int>
+#define vvi vector<vector<int>>
+#define INF INT_MAX
+#define MOD 1000000007
+
+// Input/Output Functions
+#define endl '\n'
+#define print(x) cout << x << endl;
+#define read(x) cin >> x;
+#define readv(v) for(auto& elem : v) cin >> elem;
+#define printv(v) for(const auto& elem : v) cout << elem << ' '; cout << endl;
+
+// Loop Macros
+#define f(i, n) for(int i = 0; i < n; ++i)
+#define fr(i, n) for(int i = n - 1; i >= 0; --i)
+#define fab(i, a, b) for(int i = a; i < b; ++i)
+#define fba(i, b, a) for(int i = b; i >= a; --i)
+
+
+// Commonly used algorithms
+#define all(v) v.begin(), v.end()
+#define sz(v) ((int)(v).size())
+#define SORT_UNIQUE(c) (sort(c.begin(), c.end()), c.resize(distance(c.begin(),unique(c.begin(), c.end()))))
+
+void solve() {
+    // Your solution code goes here
+    int n;
+    read(n);
+    vi a(n);
+    readv(a);
+    int ans=1;
+   // print(1);
+    cout<<1<<" ";
+    fab(i,1,n) {
+        if(a[i-ans]>=(ans+1)) ans++;
+    
+    cout<<ans<<" ";
+    }
+    cout<<endl;
+}
+
+int32_t main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int t;
+    read(t);
+
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
